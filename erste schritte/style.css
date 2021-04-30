@@ -1,0 +1,22 @@
+body {
+  background-color: lightyellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 600px;
+}
+p {
+  color: darkgray;
+}
+h1 {
+  color: black;
+}
+#zweiter-absatz {
+  color: black;
+  background-color: lightgray;
+}
+.brazil {
+  color: yellow;
+  background-color: green;
+}
+img {
+  width: 600px;
+}
