@@ -45,6 +45,52 @@ nav {
   display: block;
 }
 
+#hero {
+  background-image: url(img/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.is-white {
+  color: white;
+}
+
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.button {
+  font-size: 18px;
+  font-weight: normal;
+  color: #374a67;
+  background-color: #ffff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #374a67;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in;
+}
+
+/* Hover Pseudo Selektor (mit maus drüberschweben)*/
+.button:hover {
+  color: #ffff;
+  background-color: #374a67;
+  border-color: #ffff;
+}
+
 /*media query Bildschirm mindestens 1180 px, Mobil */
 @media (min-width: 1180px) {
   button {
