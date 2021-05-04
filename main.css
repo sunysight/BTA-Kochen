@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-size: x-large;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* id="navigationsliste" in html, 
+id =#navigationsliste in CSS */
+#navigationsliste {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+#navigationsliste li {
+  margin-left: 8px;
+  margin-right: 6px;
+}
+button {
+  background-color: transparent;
+  border: none;
+  display: inline;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#logo {
+  height: 40px;
+}
+nav {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+/*media query Bildschirm mindestens 1180 px, Mobil */
+@media (min-width: 1180px) {
+  button {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+}
