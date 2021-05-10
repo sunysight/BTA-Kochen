@@ -4,12 +4,14 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
 }
+
 a {
   color: black;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
 }
+
 /* id="navigationsliste" in html, 
 id =#navigationsliste in CSS */
 #navigationsliste {
@@ -18,15 +20,18 @@ id =#navigationsliste in CSS */
   margin: 0;
   display: flex;
 }
+
 #navigationsliste li {
   margin-left: 8px;
   margin-right: 6px;
 }
+
 button {
   background-color: transparent;
   border: none;
   display: inline;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -35,12 +40,15 @@ header {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 #logo {
   height: 40px;
 }
+
 nav {
   display: none;
 }
+
 .show {
   display: block;
 }
@@ -54,7 +62,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -65,30 +73,95 @@ nav {
 h1 {
   font-size: 32px;
 }
+
 h2 {
   font-size: 24px;
   font-weight: normal;
 }
+#rezepte h2 {
+  font-size: 36px; /*Schriftgröße*/
+  font-weight: bold; /*Schrift dicker*/
+  text-align: center; /*Schrift zentriert*/
+}
 
 .button {
-  font-size: 18px;
-  font-weight: normal;
-  color: #374a67;
+  font-size: 18px; /*Schriftgröße*/
+  font-weight: normal; /*Schrift dicker*/
+  color: #374a67; /*Schriftfarbe*/
   background-color: #ffff;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #374a67;
   display: inline-block;
-  text-align: center;
+  text-align: center; /*Schrift zentriert*/
   box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; /* transition: ist für das Farbfading im Button*/
+  align-self: center; /*Rahmen um den Button nicht über die ganze Breite nur so breit wie die Schrift*/
+  display: inline-block;
 }
 
-/* Hover Pseudo Selektor (mit maus drüberschweben)*/
+/* Hover Pseudo Selektor (mit Maus drüberschweben und Farbe ändern)*/
 .button:hover {
   color: #ffff;
   background-color: #374a67;
   border-color: #ffff;
+}
+/* Rezeptkarten*/
+.card {
+  text-align: center; /*Schrift zentriert*/
+  color: #828282;
+  border-radius: 8px;
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.5);
+  margin: 16px;
+  overflow: hidden;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* schnelle Möglichkeit für responsive Bilder*/
+.card img {
+  width: 100%;
+  dispay: block;
+}
+
+.card p {
+  flex-grow: 1;
+  margin: 5px;
+}
+
+.card .button {
+  color: #ffff;
+  background-color: #374a67;
+  border: 1px solid #ffff;
+  display: inline-block;
+  margin: 16px;
+}
+
+.card .button:hover {
+  color: #374a67;
+  background-color: #ffff;
+  border-color: #374a67;
+}
+
+aside {
+  background-color: #04122b;
+  color: #ffff; /* Alternative wäre gewesen class is white im html übernehmen*/
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px; /* Abstand innerhalb des Rahmen*/
+  padding-bottom: 10px;
+}
+
+aside h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#newsletter {
+  padding: 18px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 /*media query Bildschirm mindestens 1180 px, Mobil */
@@ -98,5 +171,12 @@ h2 {
   }
   nav {
     display: block;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .card {
+    width: 25%;
   }
 }
